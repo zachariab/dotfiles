@@ -1,6 +1,6 @@
 # Test file for [fish shell](http://fishshell.com).
 
-set dev $HOME/Development
+set dev $HOME/Developer
 set pm $dev/paulmillr
 set br $dev/brunch
 set ch $dev/chaplinjs

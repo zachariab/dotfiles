@@ -34,18 +34,18 @@ if [[ `uname` == 'Darwin' ]]; then
       brew install htop mysql nginx node ruby
   fi
 
-  echo 'Tweaking OS X...'
-    source 'etc/osx.sh'
+  #echo 'Tweaking OS X...'
+   # source 'etc/osx.sh'
 
   # http://github.com/sindresorhus/quick-look-plugins
-  echo 'Installing Quick Look plugins...'
-    brew tap phinze/homebrew-cask
-    brew install brew-cask
-    brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
+  #echo 'Installing Quick Look plugins...'
+    #brew tap phinze/homebrew-cask
+    #brew install brew-cask
+    #brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
 fi
 
 echo 'Symlinking config files...'
-  source 'bin/symlink-dotfiles.sh'
+  source 'symlink-dotfiles.sh'
 
 echo 'Applying sublime config...'
   st=$(pwd)/sublime/packages
