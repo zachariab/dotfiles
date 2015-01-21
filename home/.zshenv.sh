@@ -57,7 +57,7 @@ com="$dev/com"
 pm="$dev/paulmillr"
 as="$HOME/Library/Application Support"
 
-export ANDROID_HOME="/usr/local/Cellar/android-sdk/22.6"
+export ANDROID_HOME="/usr/local/Cellar/android-sdk/23.0.2"
 
 # Set the the list of directories that cd searches.
 cdpath=(
