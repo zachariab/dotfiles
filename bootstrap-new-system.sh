@@ -2,7 +2,7 @@
 
 # A simple script for setting up OSX dev environment.
 
-dev="$HOME/Developer"
+dev="$HOME/Development"
 pushd .
 mkdir -p $dev
 cd $dev
@@ -48,14 +48,12 @@ echo 'Symlinking config files...'
   source 'symlink-dotfiles.sh'
 
 echo 'Applying sublime config...'
-  st=$(pwd)/sublime/packages
-  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
-  asprefs="$as/User/Preferences.sublime-settings"
+  st=$(pwd)/sublime/Packages
+  as="$HOME/Library/Application Support/Sublime Text 2/Packages"
   if [[ -d "$as" ]]; then
-    for theme in $st/Theme*; do
-      cp -r $theme $as
+    rm -rf $as
+    ln -s $st $as
     done
-    rm $asprefs
     cp -r $st/pm-themes $as
   else
     echo "Install Sublime Text http://www.sublimetext.com"
