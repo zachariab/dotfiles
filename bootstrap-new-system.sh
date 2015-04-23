@@ -52,10 +52,9 @@ echo 'Applying sublime config...'
   as="$HOME/Library/Application Support/Sublime Text 2/Packages"
   asprefs="$as/User/Preferences.sublime-settings"
   if [[ -d "$as" ]]; then
-    for theme in $st/Theme*; do
-      cp -r $theme $as
+    rm -rf $as
+    ln -s $st $as
     done
-    rm $asprefs
     cp -r $st/pm-themes $as
   else
     echo "Install Sublime Text http://www.sublimetext.com"
