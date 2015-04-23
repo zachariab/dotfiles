@@ -1,5 +1,14 @@
 #!/usr/bin/env zsh
 
+export HISTFILE=~/.zhistory
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+setopt HIST_APPEND                      # append to history, don't overwrite it
+
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
 curr="$pm/dotfiles"
 
 # Load main files.

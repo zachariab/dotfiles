@@ -2,7 +2,7 @@
 
 # A simple script for setting up OSX dev environment.
 
-dev="$HOME/Developer"
+dev="$HOME/Development/dotfiles"
 pushd .
 mkdir -p $dev
 cd $dev
@@ -35,7 +35,7 @@ if [[ `uname` == 'Darwin' ]]; then
   fi
 
   #echo 'Tweaking OS X...'
-   # source 'etc/osx.sh'
+    source 'etc/osx.sh'
 
   # http://github.com/sindresorhus/quick-look-plugins
   #echo 'Installing Quick Look plugins...'
@@ -49,7 +49,7 @@ echo 'Symlinking config files...'
 
 echo 'Applying sublime config...'
   st=$(pwd)/sublime/packages
-  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
+  as="$HOME/Library/Application Support/Sublime Text 2/Packages"
   asprefs="$as/User/Preferences.sublime-settings"
   if [[ -d "$as" ]]; then
     for theme in $st/Theme*; do

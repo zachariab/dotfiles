@@ -1,3 +1,6 @@
+#ZB added exports
+export LANG=C
+
 # Defines environment variables.
 privenv="$HOME/.private-env"
 [[ -f "$privenv" ]] && source $privenv
@@ -50,11 +53,11 @@ typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 
 # Commonly used directories.
-dev="$HOME/Developer"
+dev="$HOME/Development"
 br="$dev/brunch"
 ch="$dev/chaplinjs"
 com="$dev/com"
-pm="$dev/paulmillr"
+pm="$dev"
 as="$HOME/Library/Application Support"
 
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/22.6"

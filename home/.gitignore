@@ -8,7 +8,6 @@
 # OS or Editor folders
 .DS_Store
 .cache
-Icon?
 
 # Folders to ignore
 .hg

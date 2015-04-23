@@ -39,9 +39,10 @@ function prompt_paulmillr_setup {
   prompt_opts=(cr percent subst)
 
   autoload -Uz add-zsh-hook
-  add-zsh-hook precmd get-vcs-info
+  # Nice feature, but takes too long
+  #add-zsh-hook precmd get-vcs-info
   add-zsh-hook chpwd list-files
-  add-zsh-hook chpwd get-vcs-info
+  #add-zsh-hook chpwd get-vcs-info
 
   # zstyle ':omz:module:editor' completing '%B%F{red}...%f%b'
 
