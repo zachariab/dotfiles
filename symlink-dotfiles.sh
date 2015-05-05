@@ -23,3 +23,9 @@ for location in $(find home -name '.*'); do
   file="${file%.sh}"
   link "$dotfiles/$location" "$HOME/$file"
 done
+echo "Installing Vim Vundle"
+git clone https://github.com/gmarik/Vundle.vim.git "$dotfiles/.vim/bundle/Vundle.vim"
+echo "Linking .vim directory"
+rm -rf "$HOME/.vim"
+ln -s "$dotfiles/.vim" "$HOME/.vim"
+ echo "done"

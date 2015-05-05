@@ -30,6 +30,9 @@ prompt 'paulmillr'
 # = Aliases =
 # ==================================================================
 
+#MacVim
+alias vi='mvim -v'
+
 # Simple clear command.
 alias cl='clear'
 

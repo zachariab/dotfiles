@@ -4,6 +4,7 @@ set number
 let g:airline_powerline_fonts = 1
 set tabstop=3
 set softtabstop=3
+set shiftwidth=3
 set expandtab
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -22,7 +23,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
-Plugin 'sjl/badwolf'
 " " All of your Plugins must be added before the following line
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'bling/vim-airline'
