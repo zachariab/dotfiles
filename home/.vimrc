@@ -1,3 +1,4 @@
+set guifont=Meslo\ LG\ M\ for\ Powerline:h12
 " filetype plugin indent on
 syntax on
 set number
@@ -32,6 +33,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'elzr/vim-json'
 Plugin 'Lokaltog/vim-easymotion'
+" " Plugin 'airblade/vim-rooter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -50,15 +52,18 @@ filetype plugin indent on    " required
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
-map <C-n> :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>s :update<CR>
-colorscheme badwolf
+set background=dark
+set cursorline
+colorscheme solarized
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore bower_components
-      \ --ignore dist
       \ --ignore node_modules
       \ --ignore .hg
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'
+" " Some file type syntax associations
+au! BufNewFile,BufRead *.twig setf HTML

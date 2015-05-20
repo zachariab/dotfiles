@@ -1,6 +1,26 @@
 # Some stuff was taken from
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
+
+
+#Enable repeat on keydown
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+#Show Path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+#Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+#Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+#Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+#Set a shorter Delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
 # Main
 # ====
 
@@ -50,20 +70,20 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 ###############################################################################
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+# defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine snapshots
 sudo tmutil disablelocal
 
 # Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+#sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /Private/var/vm/sleepimage
+# sudo rm /Private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /Private/var/vm/sleepimage
+# sudo touch /Private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /Private/var/vm/sleepimage
+# sudo chflags uchg /Private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 #sudo pmset -a sms 0
@@ -158,24 +178,6 @@ sudo mdutil -E / > /dev/null
 # sleep 1 # Wait a bit to make sure the theme is loaded
 # defaults write com.apple.terminal 'Default Window Settings' -string 'paulmillr'
 # defaults write com.apple.terminal 'Startup Window Settings' -string 'paulmillr'
-
-# Transmission
-# ============
-
-# Use `~/Documents/Torrents` to store incomplete downloads
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
 
 # Memory management
 # =================

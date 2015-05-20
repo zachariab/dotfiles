@@ -36,6 +36,8 @@
   ghfork = !sh "$HOME /Development/dotfiles/git-extras/git-ghpull.sh"
   cleanup = !ruby "$HOME /Development/dotfiles/git-extras/git-cleanup.rb"
 
+  ldiff = diff --minimal --color --find-renames --find-copies --ignore-space-at-eol --ignore-space-change --ignore-all-space --ignore-blank-lines 
+
 [push]
   default = current
 
@@ -45,6 +47,7 @@
 [core]
   editor = subl
   excludesfile = ~/.gitignore
+	filemode = false
 
 [format]
   pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
@@ -78,4 +81,8 @@
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
 	required = true

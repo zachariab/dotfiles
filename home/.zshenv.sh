@@ -1,5 +1,6 @@
 #ZB added exports
 export LANG=C
+export VAGRANT_DEFAULT_PROVIDER=parallels
 
 # Defines environment variables.
 privenv="$HOME/.private-env"
