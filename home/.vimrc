@@ -21,9 +21,8 @@ Plugin 'gmarik/Vundle.vim'
 " " Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 " " Plugin 'pangloss/vim-javascript'
-Plugin 'mileszs/ack.vim'
+" " Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
 " " All of your Plugins must be added before the following line
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'bling/vim-airline'
@@ -33,6 +32,9 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'elzr/vim-json'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'rking/ag.vim'
+Plugin 'hhff/SpacegrayEighties.vim'
 " " Plugin 'airblade/vim-rooter'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,7 +58,7 @@ noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>s :update<CR>
 set background=dark
 set cursorline
-colorscheme solarized
+colorscheme SpacegrayEighties
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore bower_components
@@ -64,6 +66,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .hg
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
+      \ --ignore vendor
+      \ --ignore dist
+      \ --ignore lib
       \ -g ""'
 " " Some file type syntax associations
 au! BufNewFile,BufRead *.twig setf HTML

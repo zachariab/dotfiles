@@ -30,6 +30,9 @@ prompt 'paulmillr'
 # = Aliases =
 # ==================================================================
 
+#tmux with colors
+alias tmux="TERM=screen-256color-bce tmux"
+
 #MacVim
 alias vi='mvim -v'
 
