@@ -32,16 +32,14 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'elzr/vim-json'
 Plugin 'Lokaltog/vim-easymotion'
-<<<<<<< HEAD
 Plugin 'tomtom/tcomment_vim'
 Plugin 'rking/ag.vim'
 Plugin 'hhff/SpacegrayEighties.vim'
 " " Plugin 'airblade/vim-rooter'
-=======
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim'
->>>>>>> Yeah
+Plugin 'evidens/vim-twig'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
