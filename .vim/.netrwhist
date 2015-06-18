@@ -1,3 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =2
 let g:netrw_dirhist_1='/Users/zachariab/Development/vagrantpress/wordpress/wp-content/plugins/mac-xml-importer'
+let g:netrw_dirhist_2='/Users/zbajaber/Development/dotfiles/.vim/bundle/SpacegrayEighties.vim'

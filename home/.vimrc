@@ -76,3 +76,5 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 " " Some file type syntax associations
 au! BufNewFile,BufRead *.twig setf HTML
+hi Normal ctermfg=188 ctermbg=234 cterm=NONE guifg=#d3d0c8 guibg=#2d2d2d gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=#3e3d3d gui=NONE
