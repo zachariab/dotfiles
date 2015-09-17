@@ -31,8 +31,7 @@ if [[ `uname` == 'Darwin' ]]; then
     echo 'Installing Homebrew...'
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
       brew update
-      brew install htop mysql nginx node ruby
-  fi
+      brew install ant      cmake      colordiff      coreutils      cscope      ctags      curl      findutils      freetype      gawk      gettext      gmp      gnu-getopt      gnu-indent      gnu-sed      gnu-tar      gnutls      grep      httrack      icu4c      jpeg      libevent      libpng      libtasn1      libtool      macvim      mysql      nettle      nmap      node      openssh      openssl      p7zip      parallel      pcre      php54      readline      reattach-to-user-namespace      samba      ssh-copy-id      the_silver_searcher      tmux      trash      unixodbc      vv      wget      xz      zlib  fi
 
   #echo 'Tweaking OS X...'
     source 'etc/osx.sh'
