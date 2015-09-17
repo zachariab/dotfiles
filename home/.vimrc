@@ -13,6 +13,7 @@ let g:NERDTreeDirArrows = 1
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
 " " alternatively, pass a path where Vundle should install plugins
 " "call vundle#begin('~/some/path/here')
@@ -20,7 +21,7 @@ Plugin 'gmarik/Vundle.vim'
 " " let Vundle manage Vundle, required
 " " Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
-" " Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 " " Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 " " All of your Plugins must be added before the following line
@@ -35,11 +36,14 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'rking/ag.vim'
 Plugin 'hhff/SpacegrayEighties.vim'
+Plugin 'lepture/vim-velocity'
+
 " " Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'othree/html5.vim'
+" " Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
+Plugin 'xolox/vim-session'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -60,9 +64,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>s :update<CR>
-set background=dark
-set cursorline
-colorscheme SpacegrayEighties
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore bower_components
@@ -76,5 +77,10 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 " " Some file type syntax associations
 au! BufNewFile,BufRead *.twig setf HTML
-hi Normal ctermfg=188 ctermbg=234 cterm=NONE guifg=#d3d0c8 guibg=#2d2d2d gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=#3e3d3d gui=NONE
+au BufNewFile,BufRead *.vm,*.vtl set ft=velocity
+" " hi Normal ctermfg=188 ctermbg=234 cterm=NONE guifg=#d3d0c8 guibg=#2d2d2d gui=NONE
+" "hi CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=#3e3d3d gui=NONE
+set background=dark
+" "colorscheme SpacegrayEighties
+colorscheme solarized
+set cursorline

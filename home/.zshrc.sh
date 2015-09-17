@@ -31,7 +31,7 @@ prompt 'paulmillr'
 # ==================================================================
 
 #tmux with colors
-alias tmux="TERM=screen-256color-bce tmux"
+#alias tmux="TERM=screen-256color-bce tmux"
 
 #MacVim
 alias vi='mvim -v'
@@ -57,8 +57,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   alias c='pbcopy'
   alias p='pbpaste'
 
-  # Remove all items safely, to Trash (`brew install trash`).
-  alias rm='trash'
 
   # Case-insensitive pgrep that outputs full path.
   alias pgrep='pgrep -fli'
