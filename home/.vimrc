@@ -8,11 +8,13 @@ set softtabstop=3
 set shiftwidth=3
 set expandtab
 set nocompatible              " be iMproved, required
+set laststatus=2
 filetype off                  " required
 let g:NERDTreeDirArrows = 1
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'chriskempson/base16-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
 " " alternatively, pass a path where Vundle should install plugins
@@ -37,6 +39,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'rking/ag.vim'
 Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'lepture/vim-velocity'
+Plugin 'Raimondi/delimitMate'
 
 " " Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
@@ -79,8 +82,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 au! BufNewFile,BufRead *.twig setf HTML
 au BufNewFile,BufRead *.vm,*.vtl set ft=velocity
 " " hi Normal ctermfg=188 ctermbg=234 cterm=NONE guifg=#d3d0c8 guibg=#2d2d2d gui=NONE
-" "hi CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=#3e3d3d gui=NONE
 set background=dark
-" "colorscheme SpacegrayEighties
-colorscheme solarized
+autocmd ColorScheme * highlight CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+colorscheme base16-default
 set cursorline

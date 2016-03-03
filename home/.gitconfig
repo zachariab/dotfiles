@@ -45,7 +45,7 @@
   ui = true
 
 [core]
-  editor = subl
+  editor = vim
   excludesfile = ~/.gitignore
 	filemode = false
 

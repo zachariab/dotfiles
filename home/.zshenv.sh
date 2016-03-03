@@ -1,6 +1,7 @@
 #ZB added exports
 export LANG=C
 export VAGRANT_DEFAULT_PROVIDER=parallels
+export PATH="~/Development/scripts:$PATH"
 
 # Defines environment variables.
 privenv="$HOME/.private-env"
@@ -99,6 +100,7 @@ path=(
   /usr/{bin,sbin}
   /{bin,sbin}
   $ANDROID_HOME/tools
+  ~/Development/scripts
   $path
 )
 

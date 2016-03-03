@@ -33,6 +33,9 @@ prompt 'paulmillr'
 #tmux with colors
 #alias tmux="TERM=screen-256color-bce tmux"
 
+#Find newest file recursive
+alias findnew='find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2 -d" " | xargs ls -alh'
+
 #MacVim
 alias vi='mvim -v'
 
