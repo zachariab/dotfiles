@@ -2,6 +2,7 @@
 export LANG=C
 export VAGRANT_DEFAULT_PROVIDER=parallels
 export PATH="~/Development/scripts:$PATH"
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # Defines environment variables.
 privenv="$HOME/.private-env"
@@ -15,8 +16,8 @@ fi
 
 # Editors.
 # --------
-export EDITOR='/usr/local/bin/subl'
-export VISUAL='/usr/local/bin/subl'
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export PAGER='less'
 
 # Language.

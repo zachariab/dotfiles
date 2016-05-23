@@ -41,6 +41,9 @@ Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'lepture/vim-velocity'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
+Plugin 'mxw/vim-jsx'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'docunext/closetag.vim'
 
 " " Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
@@ -93,3 +96,4 @@ set background=dark
 autocmd ColorScheme * highlight CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 colorscheme base16-default
 set cursorline
+let g:jsx_ext_required = 0

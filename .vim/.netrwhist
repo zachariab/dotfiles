@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/zachariab/Development/vagrantpress/wordpress/wp-content/plugins/mac-xml-importer'
-let g:netrw_dirhist_2='/Users/zbajaber/Development/dotfiles/.vim/bundle/SpacegrayEighties.vim'
-let g:netrw_dirhist_3='/Users/zbajaber/Development/cms-conversion-scripts'
-let g:netrw_dirhist_4='/Users/zbajaber/Development/mac-rwd-foundation'
-let g:netrw_dirhist_5='/Users/zbajaber/Development/mac-rwd-foundation/source/patternlab/_patterns/02-organisms/cards'
