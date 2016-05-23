@@ -40,6 +40,7 @@ Plugin 'rking/ag.vim'
 Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'lepture/vim-velocity'
 Plugin 'Raimondi/delimitMate'
+Plugin 'majutsushi/tagbar'
 
 " " Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
@@ -47,6 +48,8 @@ Plugin 'mattn/emmet-vim'
 " " Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
 Plugin 'xolox/vim-session'
+Plugin 'Townk/vim-autoclose'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -67,6 +70,10 @@ let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>s :update<CR>
+noremap <Leader>C ggVG"*y``
+noremap <Leader>P ggVG"*p``
+noremap <Leader>c "*y
+noremap <Leader>p "*p
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore bower_components
