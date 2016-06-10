@@ -11,22 +11,24 @@ set nocompatible              " be iMproved, required
 set laststatus=2
 filetype off                  " required
 let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'chriskempson/base16-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
-" " alternatively, pass a path where Vundle should install plugins
-" "call vundle#begin('~/some/path/here')
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 "
-" " let Vundle manage Vundle, required
-" " Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
+" let Vundle manage Vundle, required
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
-" " Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-" " All of your Plugins must be added before the following line
+" All of your Plugins must be added before the following line
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
@@ -34,24 +36,24 @@ Plugin 'jphustman/CFML-10-Vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'elzr/vim-json'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tomtom/tcomment_vim'
+" Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'tomtom/tcomment_vim'
 Plugin 'rking/ag.vim'
-Plugin 'hhff/SpacegrayEighties.vim'
+" Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'lepture/vim-velocity'
-Plugin 'Raimondi/delimitMate'
-Plugin 'majutsushi/tagbar'
+" Plugin 'Raimondi/delimitMate'
+" Plugin 'majutsushi/tagbar'
 Plugin 'mxw/vim-jsx'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'docunext/closetag.vim'
+" " Plugin 'docunext/closetag.vim'
 
 " " Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-" " Plugin 'othree/html5.vim'
+" Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
-Plugin 'xolox/vim-session'
-Plugin 'Townk/vim-autoclose'
+" Plugin 'xolox/vim-session'
+" Plugin 'Townk/vim-autoclose'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -92,8 +94,11 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 au! BufNewFile,BufRead *.twig setf HTML
 au BufNewFile,BufRead *.vm,*.vtl set ft=velocity
 " " hi Normal ctermfg=188 ctermbg=234 cterm=NONE guifg=#d3d0c8 guibg=#2d2d2d gui=NONE
-set background=dark
 autocmd ColorScheme * highlight CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 colorscheme base16-default
 set cursorline
 let g:jsx_ext_required = 0
+augroup vagrant
+au!
+au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
