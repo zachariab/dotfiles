@@ -37,7 +37,8 @@ prompt 'paulmillr'
 alias findnew='find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2 -d" " | xargs ls -alh'
 
 #MacVim
-alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vi='mvim -v'
+alias vim='mvim -v'
 
 # Simple clear command.
 alias cl='clear'

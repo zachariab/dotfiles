@@ -2,3 +2,5 @@
 *.pyc
 /Textmate/TextMate.pid
 .vim/bundle
+.netrwhist
+*.lock

@@ -10,9 +10,6 @@ set expandtab
 set nocompatible              " be iMproved, required
 set laststatus=2
 filetype off                  " required
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,7 +21,6 @@ Plugin 'gmarik/Vundle.vim'
 "
 " let Vundle manage Vundle, required
 " Plugin 'Valloric/YouCompleteMe'
-" Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
@@ -73,7 +69,6 @@ filetype plugin indent on    " required
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
-noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>s :update<CR>
 noremap <Leader>C ggVG"*y``
 noremap <Leader>P ggVG"*p``
@@ -102,3 +97,11 @@ augroup vagrant
 au!
 au BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
+" Netrw options
+let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_liststyle = 3
+let g:netrw_winsize = -28
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro rnu'  " --> I want line numbers on the netrw buffer
+nnoremap <silent> <leader>n :Lexplore<cr>
